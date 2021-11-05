@@ -1,7 +1,9 @@
 <mat-card class="demo-inline-calendar-card">
-  <mat-calendar (selectedChange)="selected = $event"></mat-calendar>
+  <mat-calendar  [selected]="selectedRangeValue" (selectedChange)="selectedChange($event)"></mat-calendar>
 </mat-card>
-<p>Selected date: {{selected}}</p>
+<p>Selected date: {{selectedRangeValue | json}}</p>
+
+
 
 
 <!-- Copyright 2021 Google LLC. All Rights Reserved.
